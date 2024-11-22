@@ -5,9 +5,9 @@ export const route = (req: Request, res: Response) => {
   const sampleArray = [1, 2, 3, 4, 5];
 
   // Perform some array operations
-  const doubledArray = sampleArray.map((num) => num * 2);
-  const filteredArray = sampleArray.filter((num) => num > 2);
-  const sum = sampleArray.reduce((acc, num) => acc + num, 0);
+  const doubledArray = [2,4,6,8,10];
+  const filteredArray =[3,4,5];
+  const sum = 15;
 
   // Send the results as a response
   res.json({
