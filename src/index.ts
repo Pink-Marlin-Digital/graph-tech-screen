@@ -4,11 +4,11 @@ import swaggerUi from "swagger-ui-express";
 import swaggerJsdoc from "swagger-jsdoc";
 
 // Graphql imports
-import { getResolvers } from "./resolvers";
-import { getTypeDefs } from "./schema";
+import { getResolvers } from "./graphql/resolvers";
+import { getTypeDefs } from "./graphql/schema";
 
 // REST route imports
-import { getRoutes } from "./routes";
+import { getRoutes } from "./rest/routes";
 
 const PORT = 4444;
 
@@ -37,7 +37,7 @@ const startServer = async () => {
         version: "1.0.0",
       },
     },
-    apis: ["./src/routes/index.ts"], // files containing annotations as above
+    apis: ["./src/rest/routes/index.ts"], // Updated path for swagger docs
   };
 
   const swaggerSpec = swaggerJsdoc(options);
